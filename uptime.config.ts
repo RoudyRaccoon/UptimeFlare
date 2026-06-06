@@ -22,52 +22,145 @@ const workerConfig: WorkerConfig = {
     // Example HTTP Monitor
     {
       // `id` should be unique, history will be kept if the `id` remains constant
-      id: 'foo_monitor',
+      id: 'feo_app',
       // `name` is used at status page and callback message
-      name: 'My API Monitor',
+      name: 'Web App',
       // `method` should be a valid HTTP Method
       method: 'GET',
       // `target` is a valid URL
-      target: 'https://example.com',
-      // [OPTIONAL] `tooltip` is ONLY used at status page to show a tooltip
-      tooltip: 'This is a tooltip for this monitor',
+      target: 'https://furryeventsontario.ca/',
+      checkProxy: 'worker://enam',
       // [OPTIONAL] `statusPageLink` is ONLY used for clickable link at status page
-      statusPageLink: 'https://example.com',
+      statusPageLink: 'https://furryeventsontario.ca/',
+      // [OPTIONAL] `hideLatencyChart` will hide status page latency chart if set to true
+      hideLatencyChart: false,
       // [OPTIONAL] `expectedCodes` is an array of acceptable HTTP response codes, if not specified, default to 2xx
       expectedCodes: [200],
       // [OPTIONAL] `timeout` in millisecond, if not specified, default to 10000
       timeout: 10000,
-      // [OPTIONAL] headers to be sent
-      headers: {
-        'User-Agent': 'Uptimeflare',
-        Authorization: 'Bearer YOUR_TOKEN_HERE',
-      },
-      // [OPTIONAL] body to be sent (require POST/PUT/PATCH method)
-      // body: 'Hello, world!',
-      // [OPTIONAL] if specified, the response must contains the keyword to be considered as operational.
-      // responseKeyword: 'success',
-      // [OPTIONAL] if specified, the response must NOT contains the keyword to be considered as operational.
-      // responseForbiddenKeyword: 'bad gateway',
-      // [OPTIONAL] if specified, will call the check proxy to check the monitor, mainly for geo-specific checks
-      // refer to docs https://github.com/lyc8503/UptimeFlare/wiki/Check-proxy-setup before setting this value
-      // currently supports `worker://`, `globalping://` and `http(s)://` proxies
-      // checkProxy: 'worker://weur',
-      // [OPTIONAL] if true, the check will fallback to local if the specified proxy is down
-      // checkProxyFallback: true,
     },
-    // Example TCP Monitor
     {
-      id: 'test_tcp_monitor',
-      name: 'Example TCP Monitor',
-      // `method` should be `TCP_PING` for tcp monitors
-      method: 'TCP_PING',
-      // `target` should be `host:port` for tcp monitors
-      target: '1.2.3.4:22',
-      tooltip: 'My production server SSH',
-      statusPageLink: 'https://example.com',
-      timeout: 5000,
+      // `id` should be unique, history will be kept if the `id` remains constant
+      id: 'feo_forum',
+      // `name` is used at status page and callback message
+      name: 'Pack Planners Forum',
+      // `method` should be a valid HTTP Method
+      method: 'GET',
+      // `target` is a valid URL
+      target: 'https://forum.furryeventsontario.ca/',
+      checkProxy: 'worker://enam',
+      // [OPTIONAL] `statusPageLink` is ONLY used for clickable link at status page
+      statusPageLink: 'https://forum.furryeventsontario.ca/',
+      // [OPTIONAL] `hideLatencyChart` will hide status page latency chart if set to true
+      hideLatencyChart: false,
+      // [OPTIONAL] `expectedCodes` is an array of acceptable HTTP response codes, if not specified, default to 2xx
+      expectedCodes: [200],
+      // [OPTIONAL] `timeout` in millisecond, if not specified, default to 10000
+      timeout: 10000,
     },
+    {
+      // `id` should be unique, history will be kept if the `id` remains constant
+      id: 'feo_telegram',
+      // `name` is used at status page and callback message
+      name: 'Telegram Channel',
+      // `method` should be a valid HTTP Method
+      method: 'GET',
+      // `target` is a valid URL
+      target: 'https://t.me/FurryEventsOntario',
+      checkProxy: 'worker://enam',
+      // [OPTIONAL] `statusPageLink` is ONLY used for clickable link at status page
+      statusPageLink: 'https://t.me/FurryEventsOntario',
+      // [OPTIONAL] `hideLatencyChart` will hide status page latency chart if set to true
+      hideLatencyChart: false,
+      // [OPTIONAL] `expectedCodes` is an array of acceptable HTTP response codes, if not specified, default to 2xx
+      expectedCodes: [200],
+      // [OPTIONAL] `timeout` in millisecond, if not specified, default to 10000
+      timeout: 10000,
+    },
+    {
+      // `id` should be unique, history will be kept if the `id` remains constant
+      id: 'feo_event_listing',
+      // `name` is used at status page and callback message
+      name: 'Event List/Map Service',
+      // `method` should be a valid HTTP Method
+      method: 'GET',
+      // `target` is a valid URL
+      target: 'https://events.furryeventsontario.ca/evthub',
+      checkProxy: 'worker://enam',
+      // [OPTIONAL] `statusPageLink` is ONLY used for clickable link at status page
+      statusPageLink: '',
+      // [OPTIONAL] `hideLatencyChart` will hide status page latency chart if set to true
+      hideLatencyChart: false,
+      // [OPTIONAL] `expectedCodes` is an array of acceptable HTTP response codes, if not specified, default to 2xx
+      expectedCodes: [200],
+      // [OPTIONAL] `timeout` in millisecond, if not specified, default to 10000
+      timeout: 10000,
+    },
+    {
+      // `id` should be unique, history will be kept if the `id` remains constant
+      id: 'feo_api',
+      // `name` is used at status page and callback message
+      name: 'API Service',
+      // `method` should be a valid HTTP Method
+      method: 'GET',
+      // `target` is a valid URL
+      target: 'https://proxi-to-telegram.still-mud-79fe.workers.dev/ping',
+      checkProxy: 'worker://enam',
+      // [OPTIONAL] `statusPageLink` is ONLY used for clickable link at status page
+      statusPageLink: '',
+      // [OPTIONAL] `hideLatencyChart` will hide status page latency chart if set to true
+      hideLatencyChart: false,
+      // [OPTIONAL] `expectedCodes` is an array of acceptable HTTP response codes, if not specified, default to 2xx
+      expectedCodes: [200],
+      // [OPTIONAL] `timeout` in millisecond, if not specified, default to 10000
+      timeout: 10000,
+    },
+    {
+      // `id` should be unique, history will be kept if the `id` remains constant
+      id: 'feo_ad_system',
+      // `name` is used at status page and callback message
+      name: 'Community Ad Service',
+      // `method` should be a valid HTTP Method
+      method: 'GET',
+      // `target` is a valid URL
+      target: 'https://commposts.furryeventsontario.ca/login',
+      checkProxy: 'worker://enam',
+      // [OPTIONAL] `statusPageLink` is ONLY used for clickable link at status page
+      statusPageLink: '',
+      // [OPTIONAL] `hideLatencyChart` will hide status page latency chart if set to true
+      hideLatencyChart: false,
+      // [OPTIONAL] `expectedCodes` is an array of acceptable HTTP response codes, if not specified, default to 2xx
+      expectedCodes: [200],
+      // [OPTIONAL] `timeout` in millisecond, if not specified, default to 10000
+      timeout: 10000,
+    },
+    {
+      // `id` should be unique, history will be kept if the `id` remains constant
+      id: 'feo_automod_bot',
+      // `name` is used at status page and callback message
+      name: 'AutoMod Service',
+      // `method` should be a valid HTTP Method
+      method: 'GET',
+      headers: {
+        "Authorization": "Bearer ZTkzZGM4YWItNDE1MC00N2QyLWFiNDktMzQwNDYzMTY4YWQ0",
+        // Add other headers if needed
+      },
+      // `target` is a valid URL
+      target: 'https://platform.modr8.net/api/chats',
+      checkProxy: 'worker://enam',
+      // [OPTIONAL] `statusPageLink` is ONLY used for clickable link at status page
+      statusPageLink: '',
+      // [OPTIONAL] `hideLatencyChart` will hide status page latency chart if set to true
+      hideLatencyChart: false,
+      // [OPTIONAL] `expectedCodes` is an array of acceptable HTTP response codes, if not specified, default to 2xx
+      expectedCodes: [200],
+      // [OPTIONAL] `timeout` in millisecond, if not specified, default to 10000
+      timeout: 10000,
+    },
+
+
   ],
+
   // [Optional] Notification settings
   notification: {
     // [Optional] Notification webhook settings, if not specified, no notification will be sent
