@@ -12,6 +12,8 @@ const pageConfig: PageConfig = {
   links: [
     { link: 'https://furryeventsontario.ca', label: 'Back To FEO' },
   ],
+  favicon: 'https://furryeventsontario.ca/images/favicon.iso',
+  logo: 'https://furryeventsontario.ca/images/logo250.webp',
 }
 
 const workerConfig: WorkerConfig = {
