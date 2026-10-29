@@ -10,10 +10,10 @@ const pageConfig: PageConfig = {
   title: "Furry Events Ontario - System Status",
   // Links shown at the header of your status page, could set `highlight` to `true`
   links: [
-    { link: 'https://furryeventsontario.ca', label: 'Back To FEO' },
+    { link: 'https://furryeventsontario.ca', label: 'Back To FEO', highlight: true },
   ],
-  favicon: 'https://furryeventsontario.ca/images/favicon.iso',
-  logo: 'https://furryeventsontario.ca/images/logo250.webp',
+  favicon: 'https://furryeventsontario.ca/images/favicon.ico',
+  logo: 'https://furryeventsontario.ca/images/logo512circle.webp',
 }
 
 const workerConfig: WorkerConfig = {
