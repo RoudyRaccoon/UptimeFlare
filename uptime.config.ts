@@ -62,7 +62,7 @@ const workerConfig: WorkerConfig = {
       // `id` should be unique, history will be kept if the `id` remains constant
       id: 'feo_event_listing',
       // `name` is used at status page and callback message
-      name: 'Event List/Map Service',
+      name: 'Event Calendar Service',
       // `method` should be a valid HTTP Method
       method: 'GET',
       // `target` is a valid URL
@@ -81,11 +81,11 @@ const workerConfig: WorkerConfig = {
       // `id` should be unique, history will be kept if the `id` remains constant
       id: 'feo_api',
       // `name` is used at status page and callback message
-      name: 'API Service',
+      name: 'Telegram Forwarding Service',
       // `method` should be a valid HTTP Method
       method: 'GET',
       // `target` is a valid URL
-      target: 'https://proxi-to-telegram.still-mud-79fe.workers.dev/ping',
+      target: 'tockify-to-telegram.still-mud-79fe.workers.dev/ping',
       checkProxy: 'worker://enam',
       // [OPTIONAL] `statusPageLink` is ONLY used for clickable link at status page
       statusPageLink: '',
@@ -119,7 +119,7 @@ const workerConfig: WorkerConfig = {
       // `id` should be unique, history will be kept if the `id` remains constant
       id: 'feo_automod_bot',
       // `name` is used at status page and callback message
-      name: 'AutoMod Service',
+      name: 'Modr8 AutoMod Bot Service',
       // `method` should be a valid HTTP Method
       method: 'GET',
       headers: {
