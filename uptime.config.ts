@@ -85,7 +85,7 @@ const workerConfig: WorkerConfig = {
       // `method` should be a valid HTTP Method
       method: 'GET',
       // `target` is a valid URL
-      target: 'tockify-to-telegram.still-mud-79fe.workers.dev',
+      target: 'https://tockify-to-telegram.still-mud-79fe.workers.dev',
       checkProxy: 'worker://enam',
       // [OPTIONAL] `statusPageLink` is ONLY used for clickable link at status page
       statusPageLink: '',
